@@ -1,6 +1,5 @@
 package main
 
-import "C"
 import (
 	"bytes"
 	"crypto/tls"
@@ -41,8 +40,6 @@ func main() {
 	rBody.Money = 50
 	rBody.CandyType = "AA"
 	rBody.CandyCount = 2
-
-	fmt.Println(C.ask_cow("thanks!"))
 
 	jsonValue, _ := json.Marshal(rBody)
 	resp, err := client.Post("https://127.0.0.1:3333/buy_candy", "application/json", bytes.NewBuffer(jsonValue))

@@ -1,0 +1,20 @@
+syntax = "proto3";
+package transmitter;
+
+import "google/protobuf/timestamp.proto";
+option go_package = "./transmitter";
+
+// model
+message Response {
+  string session_id = 1;
+  double frequency = 2;
+  google.protobuf.Timestamp time_stamp = 3;
+}
+
+message Request {
+
+}
+
+service Transmitter {
+  rpc GetSampleStream(Request) returns (stream Response) {}
+}

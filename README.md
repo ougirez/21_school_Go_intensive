@@ -5,7 +5,7 @@ Solutions of tasks from Golang intensive in scool 21 by sber.
 Create a gRPC server and client that connects to the server and receive infinite number of samples of normal distribution from it.
 ### ex01
 By 50-100 of these samples (use sync.Pool) approximate mean and STD of the distribution. After that evaluate all other samples for anomalies
-## ex02
+### ex02
 Add all incoming anomalies to DB using Postgres
 ## Day04
 ### ex00
